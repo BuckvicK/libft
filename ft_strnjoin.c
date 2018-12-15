@@ -6,7 +6,7 @@
 /*   By: krakharo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/10 18:33:09 by krakharo          #+#    #+#             */
-/*   Updated: 2018/12/10 18:33:12 by krakharo         ###   ########.fr       */
+/*   Updated: 2018/12/15 17:05:49 by krakharo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,15 +26,15 @@ char	*ft_strnjoin(char const *s1, char const *s2, size_t n)
 		i++;
 	while (s2[j] != '\0')
 		j++;
-	res = (char*)malloc(sizeof(char) * (i + j + 1));
+	res = (char*)malloc(sizeof(char) * (i + n + 1));
 	if (!res)
-		return (0);
+		return (NULL);
 	i = -1;
 	while (s1[++i] != '\0')
 		res[i] = s1[i];
 	j = -1;
 	while (s2[++j] != '\0' && j < n)
 		res[i + j] = s2[j];
-	res[i + j] = '\0';
+	res[i + n] = '\0';
 	return (res);
 }

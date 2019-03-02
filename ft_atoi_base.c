@@ -15,7 +15,6 @@
 int			ft_atoi_base(char *str, int base)
 {
 	int		res;
-	char	*b;
 	size_t	i;
 	int		sign;
 

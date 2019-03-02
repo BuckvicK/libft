@@ -1,13 +1,8 @@
 DATE: 02.03.2019
-TIME: 17:16:26
+TIME: 17:20:24
 Comment:
-1)Add ft_atoi_base, ft_hextoi, ft_isspace, ft_isdigit
+1)Clean unused variable
 Files to commit:
-M  Makefile
-A  ft_atoi_base.c
-A  ft_hextoi.c
-A  ft_isspace.c
-A  ft_isxdigit.c
-M  libft.h
-?? .commit_message
-?? commit.sh
+ M .commit_message
+ M Makefile
+ M ft_atoi_base.c

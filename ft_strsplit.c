@@ -21,11 +21,14 @@ static int		ft_word_count(char const *s, char c)
 	count = 0;
 	i = 0;
 	word = 0;
-	while (s && s[++i] != '\0')
-		if (s[i] != c && word == 0 && (word = 1))
-			count++;
-		else if (s[i] == c)
-			word = 0;
+	if (s)
+		while (*s)
+			if (*s++ != c)
+			{
+				while (*s && *s != c)
+					s++;
+				count++;
+			}
 	return (count);
 }
 

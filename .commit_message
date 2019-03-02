@@ -1,8 +1,0 @@
-DATE: 02.03.2019
-TIME: 17:20:24
-Comment:
-1)Clean unused variable
-Files to commit:
- M .commit_message
- M Makefile
- M ft_atoi_base.c

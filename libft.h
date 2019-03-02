@@ -33,6 +33,7 @@ typedef struct		s_btree
 char				**ft_strsplit(char const *s, char c);
 char				*ft_itoa(int n);
 char				*ft_itoa_base(int n, int base);
+int					ft_atoi_base(char *str, int base);
 char				*ft_strcat(char *s1, const char *s2);
 char				*ft_strchr(const char *s, int c);
 char				*ft_strcpy(char *dst, const char *src);
@@ -55,6 +56,9 @@ int					ft_isalpha(int c);
 int					ft_isascii(int c);
 int					ft_isdigit(int c);
 int					ft_isprint(int c);
+int					ft_isxdigit(int c);
+int					ft_isspace(int c);
+int					ft_hextoi(char c);
 int					ft_memcmp(const void *s1, const void *s2, size_t n);
 int					ft_strcmp(const char *s1, const char *s2);
 int					ft_strequ(char const *s1, char const *s2);

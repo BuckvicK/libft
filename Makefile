@@ -18,7 +18,7 @@ HEAD = $(patsubst $(SRCSDIR)%, %, $(wildcard $(HEADDIR)*.h))
 OBJSDIR = objs/
 OBJS = $(SRCS:.c=.o)
 ADDFLAGS = -I $(HEADDIR)
-FLAGS = -Wall -Wextra -Werror
+FLAGS = #-Wall -Wextra -Werror
 
 vpath %.c $(SRCSDIR)
 vpath %.o $(OBJSDIR)
@@ -28,6 +28,9 @@ all: $(NAME)
 $(NAME): $(OBJSDIR) $(OBJS) $(HEAD)
 	ar rc $(NAME) $(addprefix $(OBJSDIR),$(OBJS))
 	ranlib $(NAME)
+
+main: $(OBJSDIR) $(OBJS) $(HEAD)
+	@gcc $(addprefix $(OBJSDIR),$(OBJS)) -o a.out
 
 %.o: %.c
 	gcc -c $< $(FLAGS) $(ADDFLAGS) -o $(OBJSDIR)$@

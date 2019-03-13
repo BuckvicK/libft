@@ -1,1 +1,8 @@
-*.commit_message
+**.obj
+**.obj
+a.out
+fdf
+*.swp
+*.dSYM
+*libft.a
+*fractol

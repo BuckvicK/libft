@@ -15,7 +15,7 @@ SRCSDIR = ./
 SRCS = $(patsubst $(SRCSDIR)%, %, $(wildcard $(SRCSDIR)*.c))
 HEADDIR = ./
 HEAD = $(patsubst $(SRCSDIR)%, %, $(wildcard $(HEADDIR)*.h))
-OBJSDIR = .objs/
+OBJSDIR = ./.obj/
 OBJS = $(SRCS:.c=.o)
 ADDFLAGS = -I $(HEADDIR)
 FLAGS = -Wall -Wextra -Werror
